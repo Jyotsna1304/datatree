@@ -1412,3 +1412,7 @@ class DataTree(
 
     def plot(self):
         raise NotImplementedError
+        
+    def subset_nodes(self, variables):
+        """To subset variable names from nodes"""
+        return self.map_over_subtree(lambda n: n[variables])
